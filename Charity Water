@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>charity: water | Transforms lives one drop at a time</title>
+  
+  <!-- Google Fonts for modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- GLOBAL RESET & BASE STYLES --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      background-color: #FFFFFF;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* --- BRAND PALETTE ---
+       Deep Blue (#005B96): Trust, stability, and water purity.
+       Fresh Green (#3CB371): Renewal, growth, and community impact.
+       Soft White (#FFFFFF): Clean and modern background.
+    */
+    
+    /* --- HERO SECTION --- */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('https://source.unsplash.com/1600x900/?community,water,smile') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    /* Overlay for text legibility */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background-color: #3CB371;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #349d66;
+    }
+    
+    /* --- SECTION BASE STYLE --- */
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-title {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      color: #005B96;
+      margin-bottom: 40px;
+    }
+    
+    /* --- IMPACT INFO SECTION --- */
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
+    }
+    .info-item {
+      flex: 1 1 250px;
+      background-color: #F5F5F5;
+      padding: 25px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .info-item h3 {
+      margin-bottom: 15px;
+      color: #005B96;
+    }
+    
+    /* --- GALLERY / LIFESTYLE PHOTOS (Extra Credit) --- */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* --- TESTIMONIALS SECTION --- */
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .testimonial {
+      background-color: #F5F5F5;
+      padding: 25px;
+      border-left: 4px solid #3CB371;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    /* --- IMPACT COUNTER --- */
+    .counter {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #005B96;
+      margin-top: 20px;
+    }
+    
+    /* --- CTA SECTION --- */
+    .cta-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+    
+    /* --- FOOTER --- */
+    footer {
+      background-color: #005B96;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+    
+    /* --- RESPONSIVE ADJUSTMENTS --- */
+    @media (max-width: 768px) {
+      .hero h1 {
+         font-size: 2.5rem;
+      }
+      .hero p {
+         font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Transforms lives one drop at a time</h1>
+      <p>Your support delivers clean water, renewed hope, and brighter futures to communities in need.</p>
+      <a href="#donate" class="btn">Donate Now – Flow into Change</a>
+    </div>
+  </header>
+  
+  <!-- IMPACT INFO SECTION -->
+  <section id="why">
+    <h2 class="section-title">Why Clean Water Matters</h2>
+    <div class="info">
+      <div class="info-item">
+        <h3>Health</h3>
+        <p>Clean water reduces waterborne diseases and nurtures healthier communities.</p>
+      </div>
+      <div class="info-item">
+        <h3>Education</h3>
+        <p>A reliable water source empowers children to learn and grow.</p>
+      </div>
+      <div class="info-item">
+        <h3>Community</h3>
+        <p>Water access unites communities and sparks lasting progress.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- GALLERY / LIFESTYLE PHOTOS (Extra Credit) -->
+  <section id="gallery">
+    <h2 class="section-title">Community Impact Gallery</h2>
+    <div class="gallery">
+      <!-- Photos of people enjoying fresh water and engaging in community projects -->
+      <img src="https://source.unsplash.com/800x600/?community,water,people" alt="People uniting around water">
+      <img src="https://source.unsplash.com/800x600/?children,water,smile" alt="Children enjoying clean water">
+      <img src="https://source.unsplash.com/800x600/?volunteers,water,community" alt="Volunteers installing water systems">
+      <img src="https://source.unsplash.com/800x600/?celebration,water,community" alt="Community celebrating clean water">
+    </div>
+  </section>
+  
+  <!-- TESTIMONIALS SECTION -->
+  <section id="stories">
+    <h2 class="section-title">Success Stories</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Our community now has access to clean, safe water. Every day, life improves for everyone here."</p>
+        <strong>- Community Leader</strong>
+      </div>
+      <div class="testimonial">
+        <p>"Thanks to charity: water, our children are healthier, and our future is brighter. We are forever grateful."</p>
+        <strong>- Local Teacher</strong>
+      </div>
+    </div>
+    <div class="counter">
+      Over 25,000 lives transformed
+    </div>
+  </section>
+  
+  <!-- CTA SECTION -->
+  <section id="donate">
+    <h2 class="section-title">Make a Difference Today</h2>
+    <div class="cta-section">
+      <a href="donate.html" class="btn">Donate Now – Flow into Change</a>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 charity: water. All rights reserved.</p>
+  </footer>
+
+  <!-- OPTIONAL EXTRA CREDIT - LinkedIn POST (Can be shared separately) -->
+  <!-- 
+  LinkedIn Post:
+  "Designing this landing page for charity: water has deepened my understanding of how thoughtful design drives impact. 
+  From the headline 'Transforms lives one drop at a time' to the engaging visuals and clear calls to action, every element reminds us 
+  that even the smallest effort creates ripples of change. Proud to support a mission that brings clean water and hope to communities around the globe. 
+  #DesignForGood #CleanWaterForAll #FlowIntoChange"
+  -->
+</body>
+</html>
