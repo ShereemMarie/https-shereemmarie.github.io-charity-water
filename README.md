@@ -20,7 +20,201 @@
       <li><a href="#features">Features</a></li>
       <li><a href="#cta">Get Started</a></li>
     </ul>
-  </nav>
+  </nav>/* 1. RESET & VARIABLES */
+:root {
+  --clr-green-primary:   #8BC34A;
+  --clr-green-light:     #DCEDC8;
+  --clr-blue-light:      #B3E5FC;
+  --clr-white:           #FFFFFF;
+  --clr-text:            #37474F;
+
+  --fw-normal: 400;
+  --fw-bold:   600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--clr-text);
+  background: var(--clr-white);
+  line-height: 1.6;
+}
+
+/* 2. UTILITY */
+.container {
+  width: min(90%, 1000px);
+  margin: 0 auto;
+}
+h1, h2, h3, h4 {
+  font-weight: var(--fw-bold);
+}
+p {
+  margin-bottom: 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  transition: opacity 0.2s;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* 3. NAVIGATION */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.logo img {
+  height: 40px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: var(--clr-text);
+  text-decoration: none;
+}
+
+/* 4. HERO SECTION */
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.hero-text h1 {
+  font-size: 2rem;
+  color: var(--clr-green-primary);
+}
+.hero-text p {
+  font-size: 1rem;
+}
+.primary-btn {
+  background: var(--clr-green-primary);
+  color: var(--clr-white);
+}
+.hero-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+  }
+  .hero-text, .hero-image {
+    flex: 1;
+  }
+}
+
+/* 5. ABOUT / STORY */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.about h2 {
+  font-size: 1.75rem;
+  color: var(--clr-blue-light);
+}
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+.about-text {
+  max-width: 600px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    text-align: left;
+  }
+  .about-text {
+    padding-left: 2rem;
+  }
+}
+
+/* 6. IMPACT STATS */
+.features {
+  display: grid;
+  gap: 2rem;
+  padding: 3rem 0;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.feature img {
+  width: 60px;
+  margin-bottom: 0.75rem;
+}
+.feature h3 {
+  color: var(--clr-green-primary);
+  font-size: 1.75rem;
+}
+
+/* 7. CALL TO ACTION */
+.cta {
+  background: var(--clr-blue-light);
+  text-align: center;
+  padding: 3rem 0;
+}
+.cta h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.accent-btn {
+  background: var(--clr-green-primary);
+  color: var(--clr-white);
+}
+
+/* 8. FOOTER */
+.footer {
+  display: grid;
+  gap: 2rem;
+  padding: 3rem 0;
+  background: var(--clr-green-light);
+  text-align: center;
+}
+.footer-col h4 {
+  margin-bottom: 0.5rem;
+}
+.footer-col p, .footer-col a {
+  font-size: 0.9rem;
+  color: var(--clr-text);
+  text-decoration: none;
+}
+.social {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+@media (min-width: 600px) {
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+}
 
   <!-- HERO SECTION -->
   <header class="hero container">
